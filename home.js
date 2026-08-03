@@ -1,6 +1,4 @@
 // GoShuttle — home.html logic
-// Matches auth-screen patterns (toast) and navigates to track.html
-
 document.addEventListener('DOMContentLoaded', () => {
   const toastEl = document.getElementById('toast');
 
@@ -12,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     showToast._t = setTimeout(() => toastEl.classList.remove('show'), duration);
   }
 
-  // Bus item → live track
   document.querySelectorAll('.bus-item').forEach(item => {
     item.addEventListener('click', () => {
       const busName = item.querySelector('h4')?.textContent?.trim() || 'Bus';
@@ -24,20 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Bottom navigation
-  document.querySelector('.nav-home')?.addEventListener('click', () => {
-    // Already on home
-  });
-
+  document.querySelector('.nav-home')?.addEventListener('click', () => {});
   document.querySelector('.nav-track')?.addEventListener('click', () => {
     window.location.href = 'track.html';
   });
-
   document.querySelector('.nav-schedule')?.addEventListener('click', () => {
-    showToast('Schedule page coming soon.');
+    window.location.href = 'schedule.html';
   });
-
   document.querySelector('.nav-pass')?.addEventListener('click', () => {
-    showToast('Pass page coming soon.');
+    window.location.href = 'pass.html';
   });
 });
