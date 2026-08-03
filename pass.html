@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoShuttle — Pass</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="AppStyle.css" />
+  <link rel="stylesheet" href="pass.css" />
+</head>
+<body>
+  <div class="phone">
+    <div class="status-bar">
+      <span>09:41</span>
+      <span class="icons">
+        <i class="fa-solid fa-signal"></i>
+        <i class="fa-solid fa-wifi"></i>
+        <i class="fa-solid fa-battery-full"></i>
+      </span>
+    </div>
+
+    <div class="app-header pass-header">
+      <div class="logo">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="4" width="18" height="13" rx="3" fill="#22337a"/>
+          <rect x="5.5" y="6.5" width="13" height="5" rx="1" fill="#fff"/>
+          <circle cx="7.5" cy="19" r="1.6" fill="#22337a"/>
+          <circle cx="16.5" cy="19" r="1.6" fill="#22337a"/>
+        </svg>
+      </div>
+      <h1>My Pass</h1>
+      <p>Your digital shuttle ticket</p>
+    </div>
+
+    <div class="content pass-content">
+      <!-- Pass card -->
+      <div class="pass-card">
+        <div class="pass-card-top">
+          <div class="brand">
+            <div class="brand-logo">
+              <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="3" y="4" width="18" height="13" rx="3" fill="#22337a"/>
+                <rect x="5.5" y="6.5" width="13" height="5" rx="1" fill="#fff"/>
+                <circle cx="7.5" cy="19" r="1.6" fill="#22337a"/>
+                <circle cx="16.5" cy="19" r="1.6" fill="#22337a"/>
+              </svg>
+            </div>
+            <span class="brand-name">GoShuttle</span>
+          </div>
+          <div class="status-pill">
+            <span class="status-dot"></span>
+            ACTIVE
+          </div>
+        </div>
+
+        <h2 class="pass-name">Samukelisiwe M.</h2>
+        <div class="pass-id" id="copyId" role="button" tabindex="0" title="Tap to copy Student ID">
+          Student ID • <span id="studentIdValue">219344639</span>
+          <i class="fa-regular fa-copy"></i>
+        </div>
+
+        <div class="pass-details">
+          <div class="pass-detail-group">
+            <div class="pass-field">
+              <div class="pass-label">Valid Until</div>
+              <div class="pass-value">31 Mar 2026</div>
+            </div>
+            <div class="pass-field">
+              <div class="pass-label">Type</div>
+              <div class="pass-value">Monthly</div>
+            </div>
+          </div>
+          <div class="pass-icon-box">
+            <i class="fa-solid fa-bus"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-calendar-day"></i></div>
+          <div class="stat-label">Days Left</div>
+          <div class="stat-value" data-target="34">34</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-route"></i></div>
+          <div class="stat-label">Trips Used</div>
+          <div class="stat-value" data-target="47">47</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-piggy-bank"></i></div>
+          <div class="stat-label">You Saved</div>
+          <div class="stat-value" data-target="380" data-prefix="R ">R 380</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon"><i class="fa-solid fa-star"></i></div>
+          <div class="stat-label">Preferred</div>
+          <div class="stat-value">G1</div>
+        </div>
+      </div>
+
+      <h3 class="section-title">How to use your pass</h3>
+      <ul class="steps-list">
+        <li class="step-card">
+          <div class="step-number"><span class="step-num">1</span></div>
+          <div class="step-body">
+            <div class="step-title">Check the schedule</div>
+            <div class="step-desc">See departure times for your route in the Schedule tab.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-number"><span class="step-num">2</span></div>
+          <div class="step-body">
+            <div class="step-title">Board at your stop</div>
+            <div class="step-desc">Show this pass to the driver when you get on.</div>
+          </div>
+        </li>
+        <li class="step-card">
+          <div class="step-number"><span class="step-num">3</span></div>
+          <div class="step-body">
+            <div class="step-title">Ride with confidence</div>
+            <div class="step-desc">Your pass is valid until the date shown above.</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <nav class="bottom-nav">
+      <button class="nav-home" type="button">
+        <i class="fa-solid fa-house nav-icon"></i>
+        Home
+      </button>
+      <button class="nav-track" type="button">
+        <i class="fa-solid fa-location-dot nav-icon"></i>
+        Track
+      </button>
+      <button class="nav-schedule" type="button">
+        <i class="fa-solid fa-calendar-days nav-icon"></i>
+        Schedule
+      </button>
+      <button class="nav-pass active" type="button">
+        <i class="fa-solid fa-ticket nav-icon"></i>
+        Pass
+      </button>
+    </nav>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="pass.js"></script>
+</body>
+</html>

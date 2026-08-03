@@ -1,0 +1,229 @@
+/* Schedule (Stops & Routes) — page-specific styles on top of AppStyle.css */
+
+.app-header.schedule-header {
+  padding-bottom: 20px;
+}
+
+.app-header.schedule-header .logo {
+  margin-bottom: 10px;
+}
+
+.search-wrap {
+  position: relative;
+  margin-top: 16px;
+}
+
+.search-wrap > i {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.search-bar {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  outline: none;
+  border-radius: var(--radius-full);
+  padding: 12px 16px 12px 42px;
+  font-size: 14px;
+  color: #fff;
+  font-family: inherit;
+}
+
+.search-bar::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.search-bar:focus {
+  background: rgba(255, 255, 255, 0.22);
+}
+
+.schedule-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Route card */
+.route-card {
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: 16px;
+  border: 1px solid var(--field-border);
+  box-shadow: 0 2px 8px rgba(10,15,30,0.04);
+}
+
+.route-header {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding-bottom: 14px;
+  margin-bottom: 6px;
+  border-bottom: 1px solid var(--field-border);
+  cursor: pointer;
+}
+
+.badge {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.badge.g1 { background: var(--navy); }
+.badge.g2 { background: var(--teal); }
+
+.route-header-text { flex: 1; min-width: 0; }
+
+.route-title {
+  font-weight: 700;
+  font-size: 14.5px;
+  color: var(--ink);
+}
+
+.route-meta {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+.chevron {
+  flex-shrink: 0;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 13px;
+  transition: transform 0.2s ease;
+}
+
+.route-card.collapsed .chevron {
+  transform: rotate(-90deg);
+}
+
+.route-card .stops-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+  max-height: 600px;
+  opacity: 1;
+  transition: max-height 0.25s ease, opacity 0.2s ease;
+}
+
+.route-card.collapsed .stops-list {
+  max-height: 0;
+  opacity: 0;
+}
+
+.stops-list::before {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 14px;
+  bottom: 14px;
+  width: 2px;
+  background: var(--field-border);
+}
+
+.stop-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 9px 6px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background 0.15s ease;
+}
+
+.stop-item:hover { background: #f8f9fb; }
+.stop-item.selected { background: #eef2ff; }
+.stop-item.selected .stop-name { color: var(--navy); }
+
+.dot {
+  flex-shrink: 0;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+  margin-top: 4px;
+}
+
+.dot.major {
+  width: 10px;
+  height: 10px;
+  background: var(--navy);
+  box-shadow: 0 0 0 3px #fff;
+}
+
+.dot.minor {
+  width: 7px;
+  height: 7px;
+  background: var(--teal);
+  margin: 5px 1.5px 0;
+  box-shadow: 0 0 0 3px #fff;
+}
+
+.stop-info { flex: 1; min-width: 0; }
+
+.stop-name-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.stop-name {
+  font-weight: 600;
+  font-size: 13.5px;
+  color: var(--ink);
+}
+
+.stop-sub {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+.campus-badge {
+  background: #eef2ff;
+  color: var(--navy);
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 7px;
+  white-space: nowrap;
+}
+
+.stop-time {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--teal);
+  white-space: nowrap;
+  padding-top: 1px;
+}
+
+.stop-item.hidden,
+.route-card.hidden {
+  display: none;
+}
+
+.empty-state {
+  display: none;
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  padding: 40px 20px;
+}
+
+.empty-state.visible { display: block; }

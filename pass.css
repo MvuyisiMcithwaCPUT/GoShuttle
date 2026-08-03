@@ -1,0 +1,259 @@
+/* Pass page — styles on top of AppStyle.css */
+
+.pass-header {
+  padding-bottom: 18px;
+}
+
+.pass-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Pass card */
+.pass-card {
+  background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy) 45%, var(--teal) 100%);
+  border-radius: 20px;
+  padding: 22px 20px;
+  color: #fff;
+  box-shadow: 0 16px 30px -12px rgba(14, 34, 70, 0.45);
+  margin-bottom: 16px;
+}
+
+.pass-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo {
+  width: 34px;
+  height: 34px;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+}
+
+.brand-logo svg {
+  width: 18px;
+  height: 18px;
+}
+
+.brand-name {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.status-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255,255,255,0.18);
+  border-radius: var(--radius-full);
+  padding: 5px 12px 5px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #34d399;
+}
+
+.pass-name {
+  font-size: 22px;
+  font-weight: 800;
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+}
+
+.pass-id {
+  font-size: 13px;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 22px;
+  cursor: pointer;
+  width: fit-content;
+  border-bottom: 1px dashed rgba(255,255,255,0.35);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.15s ease;
+}
+
+.pass-id:hover,
+.pass-id:focus-visible {
+  color: #fff;
+}
+
+.pass-id i {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.pass-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.pass-detail-group {
+  display: flex;
+  gap: 28px;
+}
+
+.pass-label {
+  font-size: 11.5px;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 4px;
+}
+
+.pass-value {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.pass-icon-box {
+  width: 56px;
+  height: 56px;
+  background: #fff;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--navy);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  flex-shrink: 0;
+  font-size: 24px;
+}
+
+/* Stats */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.stat-card {
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: 16px;
+  border: 1px solid var(--field-border);
+  box-shadow: 0 2px 8px rgba(10,15,30,0.04);
+}
+
+.stat-icon {
+  width: 38px;
+  height: 38px;
+  background: #e8f5f0;
+  color: var(--teal);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.stat-label {
+  font-size: 12.5px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+/* How to use */
+.section-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--ink);
+  margin: 18px 0 12px;
+}
+
+.steps-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.step-card {
+  background: #fff;
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  border: 1px solid var(--field-border);
+  box-shadow: 0 2px 8px rgba(10,15,30,0.04);
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.step-card:hover {
+  background: #fafbfc;
+  border-color: var(--navy);
+}
+
+.step-number {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+  transition: background 0.15s ease;
+}
+
+.step-card.completed .step-number {
+  background: var(--teal);
+}
+
+.step-title {
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 3px;
+  transition: color 0.15s ease;
+}
+
+.step-card.completed .step-title {
+  color: var(--muted);
+  text-decoration: line-through;
+}
+
+.step-desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.4;
+  transition: opacity 0.15s ease;
+}
+
+.step-card.completed .step-desc {
+  opacity: 0.6;
+}
