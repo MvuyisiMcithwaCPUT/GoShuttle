@@ -1,0 +1,69 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+}
+
+.map-header {
+  background-color: #0b4db8;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 15px;
+}
+
+.map-header .back {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.map-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  background-color: #e8f0ff;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.location {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.location.active {
+  background-color: #00b050;
+  color: white;
+}
+
+.bus-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+}
+
+.bus-info {
+  background-color: #fff;
+  margin: 15px;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.on-time {
+  color: #00b050;
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: #fff;
+  border-top: 1px solid #ddd;
+  padding: 10px 0;
+}

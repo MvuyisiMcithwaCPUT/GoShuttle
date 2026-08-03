@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoShuttle Live Map</title>
+  <link rel="stylesheet" href="track.css" />
+</head>
+<body>
+  <div class="map-app">
+    <header class="map-header">
+      <button class="back">←</button>
+      <h2>G1 • Live</h2>
+    </header>
+
+    <div class="map-grid">
+      <div class="location">Site B</div>
+      <div class="location active">Site C (You)</div>
+      <div class="location">Delft</div>
+      <div class="location">CPUT</div>
+      <div class="bus-icon">🚌</div>
+    </div>
+
+    <section class="bus-info">
+      <h3>Bus #GS-112</h3>
+      <p>Khayelitsha → CPUT Bellville</p>
+      <ul>
+        <li>Site B 07:20</li>
+        <li>Site C 07:28</li>
+        <li>Delft 07:35</li>
+        <li>CPUT 07:45</li>
+      </ul>
+      <p>Status: <span class="on-time">On Time</span></p>
+      <p>Capacity: 62%</p>
+      <p>Driver: Thabo M.</p>
+    </section>
+
+    <nav class="bottom-nav">
+      <button class="nav-home">Home</button>
+      <button class="nav-track">Track</button>
+      <button class="nav-schedule">Schedule</button>
+      <button class="nav-pass">Pass</button>
+    </nav>
+  </div>
+  <script src="track.js"></script>
+</body>
+</html>
